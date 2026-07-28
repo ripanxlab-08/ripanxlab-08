@@ -1,6 +1,11 @@
 name: Update jet heatmap SVG
 
 on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'dist/**'
   schedule:
     # Runs once a day at 05:30 UTC. Adjust as you like.
     - cron: "30 5 * * *"
